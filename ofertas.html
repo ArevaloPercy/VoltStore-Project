@@ -3,100 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoltStore - Ofertas Imperdibles</title>
+    <title>VoltStore - Ofertas y Liquidación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #0b0f17;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar-custom {
+            background-color: #121826;
+            border-bottom: 1px solid #1f293d;
+        }
+        .nav-link {
+            color: #9ca3af !important;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #00f2fe !important;
+        }
+        .card-custom {
+            background-color: #121826;
+            border: 1px solid #1f293d;
+            border-radius: 12px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            border-color: #00f2fe;
+        }
+        .badge-promo {
+            background-color: #ff0055;
+            color: white;
+            font-weight: bold;
+            padding: 0.4em 0.8em;
+            border-radius: 6px;
+        }
+        .badge-liq {
+            background-color: #ff9900;
+            color: black;
+            font-weight: bold;
+            padding: 0.4em 0.8em;
+            border-radius: 6px;
+        }
+        .price-old {
+            text-decoration: line-through;
+            color: #6b7280;
+            margin-right: 0.5rem;
+        }
+        .price-new {
+            color: #00f2fe;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .btn-cyan {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            border: none;
+            font-weight: 600;
+        }
+        .btn-cyan:hover {
+            opacity: 0.9;
+            color: white;
+        }
+        footer {
+            background-color: #121826;
+            border-top: 1px solid #1f293d;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Cabecera -->
-    <header>
-        <div class="nav-container">
-            <a href="index.html" target="_blank" class="logo">⚡ VoltStore</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" target="_blank">Inicio</a></li>
-                    <li><a href="ofertas.html" target="_blank" class="active">Ofertas</a></li>
-                    <li><a href="productos.html" target="_blank">Productos</a></li>
-                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
-                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
-                    <li><a href="micuenta.html" target="_blank">Mi Cuenta</a></li>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="index.html">
+                <span style="color: #00f2fe;">VOLT</span>STORE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="micuenta.html">Mi Cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito 🛒</a></li>
                 </ul>
-            </nav>
-            <a href="carrito.html" target="_blank" class="btn-carrito">🛒 Carrito</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="py-5 text-center" style="background: linear-gradient(180deg, #121826 0%, #0b0f17 100%); border-bottom: 1px solid #1f293d;">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Ofertas Especiales</h1>
+            <p class="text-secondary lead">Aprovecha nuestros descuentos exclusivos por tiempo limitado y precios de liquidación.</p>
         </div>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="container">
-        <section>
-            <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: #ffffff;">Ofertas <span style="color: #ff4d4d;">imperdibles</span></h1>
-            <p style="color: #9ca3af; margin-bottom: 2rem;">Precios increíbles por tiempo limitado en tecnología seleccionada.</p>
+    <div class="container my-5">
 
-            <!-- Categorías de Ofertas (Filtros Simples) -->
-            <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-                <button class="btn-primary" style="background-color: #00f0ff;">🏷️ Descuentos</button>
-                <button class="btn-outline">🔥 Promociones</button>
-                <button class="btn-outline">⚡ Liquidación</button>
+        <!-- Sección 1: Promociones del Mes -->
+        <section class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <h2 class="h3 fw-bold mb-0">🔥 Promociones del Mes</h2>
+                <span class="badge badge-promo ms-3">Hasta 35% OFF</span>
             </div>
+            
+            <div class="row g-4">
+                <!-- Producto Promo 1 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" class="card-img-top rounded mb-3" alt="Audífonos Bluetooth" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-0 d-flex flex-column">
+                            <span class="text-secondary small">Audio</span>
+                            <h5 class="card-title text-white my-2">Audífonos Noise Cancelling</h5>
+                            <p class="card-text text-secondary small flex-grow-1">Cancelación activa de ruido con batería de hasta 30 horas continuas.</p>
+                            <div class="mb-3">
+                                <span class="price-old">S/ 399.00</span>
+                                <span class="price-new">S/ 279.00</span>
+                            </div>
+                            <button class="btn btn-cyan w-100">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Grilla de Ofertas -->
-            <div class="grid-productos">
-                <!-- Oferta 1 -->
-                <article class="card">
-                    <span style="background-color: #ff4d4d; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; width: fit-content; margin-bottom: 8px;">-15% OFF</span>
-                    <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?auto=format&fit=crop&w=500&q=80" alt="Samsung S25">
-                    <h3>Samsung Galaxy S25 Ultra</h3>
-                    <p style="color: #6b7280; text-decoration: line-through; font-size: 0.9rem;">$1,299.00</p>
-                    <div class="price">S/. 1,099.00</div>
-                    <button class="btn-primary" onclick="agregarAlCarrito('Samsung S25 Ultra')">Añadir</button>
-                </article>
+                <!-- Producto Promo 2 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3">
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=500&q=80" class="card-img-top rounded mb-3" alt="Mouse Gamer" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-0 d-flex flex-column">
+                            <span class="text-secondary small">Periféricos</span>
+                            <h5 class="card-title text-white my-2">Mouse Gamer RGB 16000 DPI</h5>
+                            <p class="card-text text-secondary small flex-grow-1">Sensor óptico de alta precisión y botones programables.</p>
+                            <div class="mb-3">
+                                <span class="price-old">S/ 180.00</span>
+                                <span class="price-new">S/ 129.00</span>
+                            </div>
+                            <button class="btn btn-cyan w-100">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Oferta 2 -->
-                <article class="card">
-                    <span style="background-color: #ff4d4d; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; width: fit-content; margin-bottom: 8px;">-14% OFF</span>
-                    <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=500&q=80" alt="Laptop ASUS">
-                    <h3>ASUS ROG Zephyrus G16</h3>
-                    <p style="color: #6b7280; text-decoration: line-through; font-size: 0.9rem;">$2,099.00</p>
-                    <div class="price">S/. 1,799.00</div>
-                    <button class="btn-primary" onclick="agregarAlCarrito('ASUS ROG Zephyrus')">Añadir</button>
-                </article>
-
-                <!-- Oferta 3 -->
-                <article class="card">
-                    <span style="background-color: #ff4d4d; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; width: fit-content; margin-bottom: 8px;">-20% OFF</span>
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Audífonos Sony">
-                    <h3>Sony WH-1000XM5</h3>
-                    <p style="color: #6b7280; text-decoration: line-through; font-size: 0.9rem;">$379.00</p>
-                    <div class="price">S/. 299.99</div>
-                    <button class="btn-primary" onclick="agregarAlCarrito('Sony WH-1000XM5')">Añadir</button>
-                </article>
+                <!-- Producto Promo 3 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=500&q=80" class="card-img-top rounded mb-3" alt="Laptop Pro" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-0 d-flex flex-column">
+                            <span class="text-secondary small">Laptops</span>
+                            <h5 class="card-title text-white my-2">Laptop UltraSlim 15" i7</h5>
+                            <p class="card-text text-secondary small flex-grow-1">16GB RAM, 512GB SSD NVMe y pantalla Full HD IPS.</p>
+                            <div class="mb-3">
+                                <span class="price-old">S/ 3,899.00</span>
+                                <span class="price-new">S/ 3,199.00</span>
+                            </div>
+                            <button class="btn btn-cyan w-100">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>VoltStore</h4>
-                <p style="color: #9ca3af; font-size: 0.9rem;">La mejor tienda de electrónica del Perú.<br>Tecnología premium al mejor precio.</p>
+        <hr class="my-5" style="border-color: #1f293d;">
+
+        <!-- Sección 2: Liquidación de Últimas Unidades -->
+        <section>
+            <div class="d-flex align-items-center mb-4">
+                <h2 class="h3 fw-bold mb-0">⚡ Zona de Liquidación</h2>
+                <span class="badge badge-liq ms-3">Últimas Unidades</span>
             </div>
-            <div class="footer-col">
-                <h4>Navegación</h4>
-                <ul>
-                    <li><a href="index.html" target="_blank">Inicio</a></li>
-                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
-                    <li><a href="productos.html" target="_blank">Productos</a></li>
-                    <li><a href="ofertas.html" target="_blank">Ofertas</a></li>
-                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
-                </ul>
+
+            <div class="row g-4">
+                <!-- Producto Liquidación 1 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=500&q=80" class="card-img-top rounded mb-3" alt="Smartwatch" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-0 d-flex flex-column">
+                            <span class="text-secondary small">Wearables</span>
+                            <h5 class="card-title text-white my-2">Smartwatch Fitness v2</h5>
+                            <p class="card-text text-secondary small flex-grow-1">Monitoreo cardiaco, GPS integrado y resistencia al agua 50m.</p>
+                            <div class="mb-3">
+                                <span class="price-old">S/ 250.00</span>
+                                <span class="price-new">S/ 139.00</span>
+                            </div>
+                            <button class="btn btn-cyan w-100">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto Liquidación 2 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3">
+                        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=500&q=80" class="card-img-top rounded mb-3" alt="Teclado Mecánico" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-0 d-flex flex-column">
+                            <span class="text-secondary small">Periféricos</span>
+                            <h5 class="card-title text-white my-2">Teclado Mecánico 60% Switches Red</h5>
+                            <p class="card-text text-secondary small flex-grow-1">Formato compacto ideal para gaming con iluminación RGB configurable.</p>
+                            <div class="mb-3">
+                                <span class="price-old">S/ 210.00</span>
+                                <span class="price-new">S/ 119.00</span>
+                            </div>
+                            <button class="btn btn-cyan w-100">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto Liquidación 3 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3">
+                        <img src="https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?auto=format&fit=crop&w=500&q=80" class="card-img-top rounded mb-3" alt="Soporte Laptop" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-0 d-flex flex-column">
+                            <span class="text-secondary small">Accesorios</span>
+                            <h5 class="card-title text-white my-2">Soporte de Aluminio Regulable</h5>
+                            <p class="card-text text-secondary small flex-grow-1">Diseño ergonómico plegable compatible con laptops de hasta 17".</p>
+                            <div class="mb-3">
+                                <span class="price-old">S/ 90.00</span>
+                                <span class="price-new">S/ 45.00</span>
+                            </div>
+                            <button class="btn btn-cyan w-100">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 VoltStore - Todos los derechos reservados</p>
+        </section>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="text-center text-secondary">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 VoltStore. Proyecto académico para Cibertec. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
