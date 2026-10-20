@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltStore - Contáctanos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" target="_blank" class="logo">⚡ VoltStore</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" target="_blank">Inicio</a></li>
+                    <li><a href="ofertas.html" target="_blank">Ofertas</a></li>
+                    <li><a href="productos.html" target="_blank">Productos</a></li>
+                    <li><a href="contacto.html" target="_blank" class="active">Contacto</a></li>
+                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
+                    <li><a href="micuenta.html" target="_blank">Mi Cuenta</a></li>
+                </ul>
+            </nav>
+            <a href="carrito.html" target="_blank" class="btn-carrito">🛒 Carrito</a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <section>
+            <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: #ffffff;">Contáctanos</h1>
+            <p style="color: #9ca3af; margin-bottom: 2rem;">Estamos aquí para ayudarte. Respuesta en menos de 24 horas.</p>
+
+            <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                <!-- Formulario de Contacto -->
+                <div style="flex: 1; min-width: 300px; background-color: #121826; padding: 2rem; border-radius: 8px; border: 1px solid #1f293d;">
+                    <h2 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: #00f0ff;">Formulario de Contacto</h2>
+                    <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito! Te responderemos pronto.');">
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: #9ca3af;">Tu nombre</label>
+                            <input type="text" placeholder="Ej. Juan Pérez" required style="width: 100%; padding: 0.75rem; background-color: #0b0f19; border: 1px solid #1f293d; border-radius: 6px; color: white;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: #9ca3af;">Correo electrónico</label>
+                            <input type="email" placeholder="tu@email.com" required style="width: 100%; padding: 0.75rem; background-color: #0b0f19; border: 1px solid #1f293d; border-radius: 6px; color: white;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: #9ca3af;">Mensaje</label>
+                            <textarea placeholder="Cuéntanos en qué podemos ayudarte..." rows="4" required style="width: 100%; padding: 0.75rem; background-color: #0b0f19; border: 1px solid #1f293d; border-radius: 6px; color: white;"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Enviar mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Preguntas Frecuentes (FAQ) -->
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: #00f0ff;">Preguntas Frecuentes (FAQ)</h2>
+                    
+                    <div style="background-color: #121826; padding: 1rem; border-radius: 8px; border: 1px solid #1f293d; margin-bottom: 1rem;">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.3rem;">¿Cuánto tarda el envío?</h3>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">Realizamos envíos rápidos de 24 a 48 horas en Lima metropolitana.</p>
+                    </div>
+
+                    <div style="background-color: #121826; padding: 1rem; border-radius: 8px; border: 1px solid #1f293d; margin-bottom: 1rem;">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.3rem;">¿Los productos tienen garantía?</h3>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">Sí, todos nuestros dispositivos cuentan con 1 año de garantía oficial de fábrica.</p>
+                    </div>
+
+                    <div style="background-color: #121826; padding: 1rem; border-radius: 8px; border: 1px solid #1f293d;">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.3rem;">¿Aceptan tarjetas de crédito?</h3>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">Sí, aceptamos todas las tarjetas de débito y crédito del mercado de manera segura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>VoltStore</h4>
+                <p style="color: #9ca3af; font-size: 0.9rem;">La mejor tienda de electrónica del Perú.<br>Tecnología premium al mejor precio.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html" target="_blank">Inicio</a></li>
+                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
+                    <li><a href="productos.html" target="_blank">Productos</a></li>
+                    <li><a href="ofertas.html" target="_blank">Ofertas</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoltStore - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

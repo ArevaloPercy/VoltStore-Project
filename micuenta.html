@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltStore - Mi Cuenta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" target="_blank" class="logo">⚡ VoltStore</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" target="_blank">Inicio</a></li>
+                    <li><a href="ofertas.html" target="_blank">Ofertas</a></li>
+                    <li><a href="productos.html" target="_blank">Productos</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
+                    <li><a href="micuenta.html" target="_blank" class="active">Mi Cuenta</a></li>
+                </ul>
+            </nav>
+            <a href="carrito.html" target="_blank" class="btn-carrito">🛒 Carrito</a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <section style="max-width: 450px; margin: 2rem auto; background-color: #121826; padding: 2.5rem; border-radius: 8px; border: 1px solid #1f293d; text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">👤</div>
+            <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #ffffff;">Mi Cuenta</h1>
+            <p style="color: #9ca3af; margin-bottom: 2rem; font-size: 0.95rem;">Accede para ver tus pedidos, lista de deseos y más.</p>
+
+            <!-- Formulario de Inicio de Sesión Básico -->
+            <form onsubmit="event.preventDefault(); alert('¡Sesión iniciada correctamente!');" style="text-align: left; margin-bottom: 1.5rem;">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: #9ca3af;">Correo electrónico</label>
+                    <input type="email" placeholder="tu@email.com" required style="width: 100%; padding: 0.75rem; background-color: #0b0f19; border: 1px solid #1f293d; border-radius: 6px; color: white;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: #9ca3af;">Contraseña</label>
+                    <input type="password" placeholder="********" required style="width: 100%; padding: 0.75rem; background-color: #0b0f19; border: 1px solid #1f293d; border-radius: 6px; color: white;">
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; text-align: center;">Iniciar Sesión</button>
+            </form>
+
+            <div style="border-top: 1px solid #1f293d; padding-top: 1rem;">
+                <p style="color: #9ca3af; font-size: 0.9rem;">¿No tienes una cuenta? <a href="#" onclick="alert('Formulario de registro rápido en desarrollo')" style="color: #00f0ff; text-decoration: none;">Regístrate gratis</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>VoltStore</h4>
+                <p style="color: #9ca3af; font-size: 0.9rem;">La mejor tienda de electrónica del Perú.<br>Tecnología premium al mejor precio.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html" target="_blank">Inicio</a></li>
+                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
+                    <li><a href="productos.html" target="_blank">Productos</a></li>
+                    <li><a href="ofertas.html" target="_blank">Ofertas</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoltStore - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

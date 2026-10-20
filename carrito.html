@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltStore - Carrito de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" target="_blank" class="logo">⚡ VoltStore</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" target="_blank">Inicio</a></li>
+                    <li><a href="ofertas.html" target="_blank">Ofertas</a></li>
+                    <li><a href="productos.html" target="_blank">Productos</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
+                    <li><a href="micuenta.html" target="_blank">Mi Cuenta</a></li>
+                </ul>
+            </nav>
+            <a href="carrito.html" target="_blank" class="btn-carrito active">🛒 Carrito</a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <section>
+            <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: #ffffff;">Tu Carrito de <span>Compras</span></h1>
+            <p style="color: #9ca3af; margin-bottom: 2rem;">Revisa tus productos seleccionados antes de realizar el pago.</p>
+
+            <!-- Tabla Básica de Productos en el Carrito -->
+            <div style="background-color: #121826; padding: 1.5rem; border-radius: 8px; border: 1px solid #1f293d; margin-bottom: 2rem;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #1f293d; color: #00f0ff;">
+                            <th style="padding-bottom: 1rem;">Producto</th>
+                            <th style="padding-bottom: 1rem;">Precio</th>
+                            <th style="padding-bottom: 1rem;">Cantidad</th>
+                            <th style="padding-bottom: 1rem;">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: #9ca3af;">
+                        <tr style="border-bottom: 1px solid #1f293d;">
+                            <td style="padding: 1rem 0; color: white;">iPhone 16 Pro Max</td>
+                            <td style="padding: 1rem 0;">S/.1,199.00</td>
+                            <td style="padding: 1rem 0;">1</td>
+                            <td style="padding: 1rem 0; color: #00f0ff;">$1,199.00</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem 0; color: white;">Sony WH-1000XM5</td>
+                            <td style="padding: 1rem 0;">S/.299.99</td>
+                            <td style="padding: 1rem 0;">1</td>
+                            <td style="padding: 1rem 0; color: #00f0ff;">$299.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Resumen y Botón de Pago -->
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 2rem;">
+                <div style="text-align: right;">
+                    <p style="color: #9ca3af; font-size: 0.9rem;">Total a pagar:</p>
+                    <h2 style="font-size: 1.8rem; color: #00f0ff;">S/. 1,498.99</h2>
+                </div>
+                <button class="btn-primary" onclick="alert('¡Compra realizada con éxito! Gracias por elegir VoltStore.')">Proceder al pago</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>VoltStore</h4>
+                <p style="color: #9ca3af; font-size: 0.9rem;">La mejor tienda de electrónica del Perú.<br>Tecnología premium al mejor precio.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html" target="_blank">Inicio</a></li>
+                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
+                    <li><a href="productos.html" target="_blank">Productos</a></li>
+                    <li><a href="ofertas.html" target="_blank">Ofertas</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoltStore - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
